@@ -14,6 +14,7 @@ string lineOfStars(int width);
 
 string boxOfStars(int width, int height);
 
+void swap(int * p1, int *p2);
 
 int main(int argc, char *argv[]){
 
@@ -23,8 +24,26 @@ int main(int argc, char *argv[]){
     }
     int width = atoi(argv[1]);
     int height = atoi(argv[2]);
-    string myboxOfStars(boxOfStars(width,height));
-    cout<<myboxOfStars;
+    string myLineOfStars(lineOfStars(width));
+    cout<<"Printing a line of stars "<<endl;
+    cout<<myLineOfStars;
+    cout<<endl; 
+
+    string myBoxOfStars(boxOfStars(width,height));
+    cout<<"Printing a box of stars with width "<<width<<" and "
+        <<"height "<<height<<endl;
+    cout<<myBoxOfStars;
+
+    cout<<endl; 
+    //Uncomment the following code after to answer question 8 on hw7
+    /*
+    swap(width, height);
+    myBoxOfStars = boxOfStars(width,height);
+
+    cout<<"Printing box of stars with width "<<width<<" and "
+        <<"height "<<height<<endl;
+    cout<<myBoxOfStars;
+    */
     return 0;
 }
 
@@ -47,3 +66,13 @@ string lineOfStars(int width){
     }
     return result;
 }
+
+//What does this function do?
+void swap(int *p1, int *p2){
+    int tmp;
+    tmp = *p1; 
+    *p1 = *p2;
+    *p2 = tmp;
+
+}
+
