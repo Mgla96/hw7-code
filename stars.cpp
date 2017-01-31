@@ -35,7 +35,7 @@ int main(int argc, char *argv[]){
     cout<<myBoxOfStars;
 
     cout<<endl; 
-    //Uncomment the following code after to answer question 8 on hw7
+    //Uncomment the following code to answer question 7 on hw7
     /*
     swap(width, height);
     myBoxOfStars = boxOfStars(width,height);
